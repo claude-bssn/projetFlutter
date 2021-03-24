@@ -59,22 +59,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                 ),
-                SizedBox(width: 10),
-                Builder(
-                  builder: (context) => GestureDetector(
-                    child: Square(number: 3),
-                    onTap: () {
-                      Navigator.pushReplacementNamed(context, '/school');
-                    },
-                  ),
-                ),
               ],
             ),
           ),
         ],
       ),
     ),
-    Text('School')
   ];
 
   Widget build(BuildContext context) {
@@ -97,10 +87,6 @@ class _HomeScreenState extends State<HomeScreen> {
               icon: Icon(Icons.business),
               label: 'Business',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.school),
-              label: 'School',
-            ),
           ],
           currentIndex: _selectedPage,
           selectedItemColor: Colors.red[800],
@@ -110,8 +96,6 @@ class _HomeScreenState extends State<HomeScreen> {
         ));
   }
 }
-
-
 
 class RowCube extends StatelessWidget {
   const RowCube({

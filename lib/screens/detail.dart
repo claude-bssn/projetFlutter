@@ -13,6 +13,6 @@ class DetailScreen extends StatelessWidget {
           ],
         ),
         drawer: DrawerMenu(),
-        body: SafeArea(child: Text(args.text)));
+        );
   }
 }

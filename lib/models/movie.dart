@@ -32,6 +32,8 @@ final Timestamp releasedDate;
 }
 class ItemArguments {
   final String text;
+  final Movie movie;
 
-  ItemArguments({this.text});
+  ItemArguments({this.text, this.movie });
 }
+ 

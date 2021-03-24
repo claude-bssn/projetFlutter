@@ -1,7 +1,6 @@
 import 'package:dwm14/components/drawer.dart';
 import 'package:dwm14/components/landing.dart';
 import 'package:dwm14/screens/detail.dart';
-import 'package:dwm14/screens/firebase.dart';
 import 'package:flutter/material.dart';
 
 import '../components/square.dart';

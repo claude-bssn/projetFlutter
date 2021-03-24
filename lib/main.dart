@@ -24,12 +24,13 @@ class App extends StatelessWidget {
 
           if (snapshot.connectionState == ConnectionState.done) {
             return MaterialApp(
-              title: 'Flutter Demo',
+              title: 'Movie App',
+              debugShowCheckedModeBanner: false,
               theme: ThemeData(
                 primarySwatch: Colors.deepPurple,
               ),
               routes: routes,
-              initialRoute: isLogged() != null ? '/home' : '/register',
+              initialRoute: isLogged() != null ? '/home' : '/login',
             );
           }
 

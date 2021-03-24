@@ -5,6 +5,7 @@ import 'package:dwm14/screens/loading.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(App());
@@ -24,12 +25,13 @@ class App extends StatelessWidget {
 
           if (snapshot.connectionState == ConnectionState.done) {
             return MaterialApp(
-              title: 'Flutter Demo',
+              title: 'Movie App',
+              debugShowCheckedModeBanner: false,
               theme: ThemeData(
                 primarySwatch: Colors.deepPurple,
               ),
               routes: routes,
-              initialRoute: isLogged() != null ? '/home' : '/register',
+              initialRoute: isLogged() != null ? '/home' : '/login',
             );
           }
 

@@ -81,6 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 password:
                                     password); // cette fonction procède à l'enregistrement sur firebase
                             print('login success');
+                            print(isLogged());
                             Navigator.pushReplacementNamed(context, '/home');
                           } on FirebaseAuthException catch (error) {
                             if (error.code == 'user-not-found') {

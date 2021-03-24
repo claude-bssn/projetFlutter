@@ -29,7 +29,7 @@ class App extends StatelessWidget {
                 primarySwatch: Colors.deepPurple,
               ),
               routes: routes,
-              initialRoute: isLogged() != null ? '/home' : '/login',
+              initialRoute: isLogged() != null ? '/home' : '/register',
             );
           }
 

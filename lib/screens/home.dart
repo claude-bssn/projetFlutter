@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Flutter'),
+          title: Text('Welcome to our Movie App'),
         ),
         drawerEnableOpenDragGesture: !disable,
         drawer: DrawerMenu(),

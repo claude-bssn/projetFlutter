@@ -10,22 +10,26 @@ class DrawerMenu extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
-            decoration: BoxDecoration(color: Colors.blue),
+            decoration: BoxDecoration(color: Colors.deepPurple),
             child: Row(
               children: [
-                Text('Active Color'),
+                Text('Movies App',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30)),
               ],
             ),
           ),
           ListTile(
-            title: Text('Detail'),
+            title: Text('Home', style: TextStyle(fontWeight: FontWeight.bold)),
             onTap: () {
-              Navigator.pushReplacementNamed(context, '/detail',
-                  arguments: ItemArguments(text: 'Detail Screen'));
+              Navigator.pushReplacementNamed(context, '/home');
             },
           ),
           ListTile(
-            title: Text('Profile'),
+            title:
+                Text('Profile', style: TextStyle(fontWeight: FontWeight.bold)),
             onTap: () {
               Navigator.pushReplacementNamed(context, '/profile');
             },
@@ -33,7 +37,8 @@ class DrawerMenu extends StatelessWidget {
           ListTile(
             title: Text(
               'Sign Out',
-              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: Colors.deepPurple, fontWeight: FontWeight.bold),
             ),
             onTap: () async {
               await firebaseAuth.signOut();

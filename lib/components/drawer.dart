@@ -31,15 +31,11 @@ class DrawerMenu extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('School'),
-            onTap: () {
-              Navigator.pushReplacementNamed(context, '/school');
-            },
-          ),
-          ListTile(
-            title: Text('Sign Out', 
-              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),),
-            onTap: () async{
+            title: Text(
+              'Sign Out',
+              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+            ),
+            onTap: () async {
               await firebaseAuth.signOut();
               Navigator.pushReplacementNamed(context, '/login');
             },

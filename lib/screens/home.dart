@@ -84,12 +84,12 @@ class _HomeScreenState extends State<HomeScreen> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.business),
-              label: 'Business',
+              icon: Icon(Icons.person),
+              label: 'Profil',
             ),
           ],
           currentIndex: _selectedPage,
-          selectedItemColor: Colors.red[800],
+          selectedItemColor: Colors.deepPurple[500],
           onTap: (index) {
             _onTap(index);
           },

@@ -1,18 +1,12 @@
-import 'package:dwm14/models/movie.dart';
 import 'package:dwm14/screens/firebase.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Landing extends StatefulWidget {
+class Landing extends StatelessWidget {
   const Landing({
     Key key,
   }) : super(key: key);
 
-  @override
-  _LandingState createState() => _LandingState();
-}
-
-class _LandingState extends State<Landing> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -42,14 +36,6 @@ class _LandingState extends State<Landing> {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: EdgeInsets.all(8),
-                    child: GestureDetector(
-                      onTap: (){
-                        Navigator.pushNamed(context, '/detail',
-                        arguments: ItemArguments(movie: movies[index] )
-                        );
-
-                      },
-                    
                     child: Column(
                       children: [
                         Container(
@@ -62,13 +48,9 @@ class _LandingState extends State<Landing> {
                                       movies[index].poster))),
                         ),
                         Text(movies[index].title),
-                        Text(movies[index].year),
-                        // Text(movies[index].kind.join(', ')),
-                        Column(children: List.generate(movies[index].kind.length, (indexKind) => Text(movies[index].kind[indexKind])),)
-
                       ],
                     ),
-                  ));
+                  );
                 },
               );
           }
